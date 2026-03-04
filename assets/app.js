@@ -2,6 +2,7 @@
 
 const noteTitleEl = document.getElementById("note-title");
 const noteContentEl = document.getElementById("note-content");
+const bgToggleInput = document.getElementById("bg-toggle-input");
 
 let notes = [];
 
@@ -111,7 +112,27 @@ function renderRoute() {
   }
 }
 
+function setAnimatedBackground(enabled) {
+  document.body.classList.toggle("static-bg", !enabled);
+  if (bgToggleInput) bgToggleInput.checked = enabled;
+  localStorage.setItem("animated_background", enabled ? "on" : "off");
+}
+
+function initBackgroundToggle() {
+  if (!bgToggleInput) return;
+
+  const saved = localStorage.getItem("animated_background");
+  const enabled = saved !== "off";
+  setAnimatedBackground(enabled);
+
+  bgToggleInput.addEventListener("change", () => {
+    setAnimatedBackground(bgToggleInput.checked);
+  });
+}
+
 async function init() {
+  initBackgroundToggle();
+
   const res = await fetch("data/notes.json");
   const data = await res.json();
   notes = data.notes;
