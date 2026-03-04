@@ -7,6 +7,8 @@
   --accent: #26d9ff;
   --accent-soft: #123042;
   --shadow: 0 16px 42px rgba(0, 0, 0, 0.35);
+  --orb-scroll-a: 0px;
+  --orb-scroll-b: 0px;
 }
 
 * {
@@ -27,7 +29,10 @@ body::before,
 body::after {
   content: "";
   position: fixed;
-  inset: -8vmax;
+  top: calc(-8vmax + var(--orb-scroll-a));
+  right: -8vmax;
+  bottom: calc(-8vmax - var(--orb-scroll-a));
+  left: -8vmax;
   pointer-events: none;
   z-index: 0;
   opacity: 0.72;
@@ -42,15 +47,17 @@ body::before {
     radial-gradient(34vmax 34vmax at 18% 24%, rgba(36, 220, 214, 0.62), rgba(36, 220, 214, 0) 68%),
     radial-gradient(30vmax 30vmax at 82% 26%, rgba(44, 197, 143, 0.58), rgba(44, 197, 143, 0) 68%),
     radial-gradient(36vmax 36vmax at 56% 80%, rgba(28, 82, 188, 0.62), rgba(28, 82, 188, 0) 68%);
-  animation: orbDriftA 20s ease-in-out infinite alternate;
+  animation: orbDriftA 16s ease-in-out infinite alternate;
 }
 
 body::after {
+  top: calc(-8vmax + var(--orb-scroll-b));
+  bottom: calc(-8vmax - var(--orb-scroll-b));
   background:
     radial-gradient(33vmax 33vmax at 76% 66%, rgba(43, 206, 200, 0.54), rgba(43, 206, 200, 0) 68%),
     radial-gradient(28vmax 28vmax at 22% 72%, rgba(43, 173, 132, 0.5), rgba(43, 173, 132, 0) 68%),
     radial-gradient(31vmax 31vmax at 46% 20%, rgba(33, 88, 201, 0.54), rgba(33, 88, 201, 0) 68%);
-  animation: orbDriftB 26s ease-in-out infinite alternate;
+  animation: orbDriftB 22s ease-in-out infinite alternate;
 }
 
 body.static-bg {
@@ -164,12 +171,31 @@ h1, h2, h3 {
 }
 
 .content-panel {
+  position: relative;
   background: var(--panel);
   border: 1px solid transparent;
   border-radius: 18px;
   box-shadow: none;
   padding: 1rem 1.2rem;
   min-height: calc(100vh - 8rem);
+}
+
+body:not(.static-bg) .content-panel {
+  box-shadow: 0 0 10px rgba(42, 200, 229, 0.08);
+}
+
+body:not(.static-bg) .content-panel::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow:
+    0 0 8px rgba(42, 200, 229, 0.1),
+    0 0 18px rgba(30, 178, 198, 0.08),
+    0 0 30px rgba(19, 150, 165, 0.06);
+  animation: glowRadiusDrift 7.2s ease-in-out infinite;
 }
 
 .content-head {
@@ -225,5 +251,38 @@ h1, h2, h3 {
   }
   100% {
     transform: translate3d(-12vw, -9vh, 0) scale(0.96);
+  }
+}
+
+@keyframes glowRadiusDrift {
+  0% {
+    box-shadow:
+      0 0 7px rgba(42, 200, 229, 0.09),
+      0 0 16px rgba(30, 178, 198, 0.07),
+      0 0 27px rgba(19, 150, 165, 0.05);
+  }
+  22% {
+    box-shadow:
+      0 0 10px rgba(42, 200, 229, 0.11),
+      0 0 22px rgba(30, 178, 198, 0.09),
+      0 0 36px rgba(19, 150, 165, 0.06);
+  }
+  47% {
+    box-shadow:
+      0 0 6px rgba(42, 200, 229, 0.08),
+      0 0 13px rgba(30, 178, 198, 0.06),
+      0 0 22px rgba(19, 150, 165, 0.05);
+  }
+  71% {
+    box-shadow:
+      0 0 9px rgba(42, 200, 229, 0.1),
+      0 0 20px rgba(30, 178, 198, 0.08),
+      0 0 32px rgba(19, 150, 165, 0.06);
+  }
+  100% {
+    box-shadow:
+      0 0 7px rgba(42, 200, 229, 0.09),
+      0 0 16px rgba(30, 178, 198, 0.07),
+      0 0 26px rgba(19, 150, 165, 0.05);
   }
 }

@@ -130,8 +130,36 @@ function initBackgroundToggle() {
   });
 }
 
+function initScrollReactiveOrbs() {
+  const root = document.documentElement;
+  let ticking = false;
+
+  const update = () => {
+    const y = window.scrollY || window.pageYOffset || 0;
+    const a = Math.max(-80, Math.min(80, y * 0.12));
+    const b = Math.max(-70, Math.min(70, y * -0.1));
+    root.style.setProperty("--orb-scroll-a", `${a}px`);
+    root.style.setProperty("--orb-scroll-b", `${b}px`);
+    ticking = false;
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    },
+    { passive: true }
+  );
+
+  update();
+}
+
 async function init() {
   initBackgroundToggle();
+  initScrollReactiveOrbs();
 
   const res = await fetch("data/notes.json");
   const data = await res.json();
