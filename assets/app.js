@@ -44,7 +44,13 @@ function getCurrentSlug() {
 }
 
 function getHomeNote() {
-  return notes.find((n) => n.basename.toLowerCase() === "index") ?? notes[0];
+  return notes.find((n) => n.basename.toLowerCase() === "home") ?? notes[0];
+}
+
+function normalizeSlug(slug) {
+  if (slug === "index") return "home";
+  if (slug === "blogs") return "blog";
+  return slug;
 }
 
 function renderNoteFromSlug(slug) {
@@ -81,7 +87,13 @@ function renderNotFound(slug) {
 }
 
 function renderRoute() {
-  const slug = getCurrentSlug();
+  const rawSlug = getCurrentSlug();
+  const slug = normalizeSlug(rawSlug);
+  if (rawSlug && rawSlug !== slug) {
+    location.replace(`#${slug}`);
+    return;
+  }
+
   if (!slug) {
     const home = getHomeNote();
     if (home && location.hash !== `#${home.slug}`) {
@@ -90,10 +102,10 @@ function renderRoute() {
     }
   }
 
-  const effectiveSlug = getCurrentSlug();
-  const note = notes.find((n) => n.slug === effectiveSlug);
+  const effectiveSlug = normalizeSlug(getCurrentSlug());
+  const note = effectiveSlug === "home" ? getHomeNote() : notes.find((n) => n.slug === effectiveSlug);
   if (note) {
-    renderNoteFromSlug(effectiveSlug);
+    renderNoteFromSlug(note.slug);
   } else {
     renderNotFound(effectiveSlug);
   }

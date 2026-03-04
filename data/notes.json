@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-03T21:29:54.563Z",
+  "generatedAt": "2026-03-04T02:29:34.021Z",
   "notes": [
     {
       "filename": "1-10.md",
@@ -42,12 +42,12 @@
       "updatedAt": "2025-11-03T02:01:54.905Z"
     },
     {
-      "filename": "index.md",
-      "basename": "index",
-      "slug": "index",
+      "filename": "home.md",
+      "basename": "home",
+      "slug": "home",
       "title": "Hello!",
       "markdown": "Haven't made the website yet, check back later.",
-      "updatedAt": "2025-09-30T20:51:01.563Z"
+      "updatedAt": "2026-03-04T02:27:16.832Z"
     }
   ]
 }
