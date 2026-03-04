@@ -1,0 +1,12 @@
+﻿{
+  "name": "website26",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sleek markdown-driven personal website",
+  "scripts": {
+    "build:content": "node scripts/build-content.mjs",
+    "build": "npm run build:content",
+    "dev": "npm run build:content && python -m http.server 5173",
+    "start": "npm run dev"
+  }
+}

@@ -1,0 +1,146 @@
+﻿:root {
+  --bg: #090f14;
+  --panel: #090f14;
+  --ink: #b8c7d5;
+  --muted: #7e94a8;
+  --line: #1f3244;
+  --accent: #26d9ff;
+  --accent-soft: #123042;
+  --shadow: 0 16px 42px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.site-shell {
+  width: min(860px, 94vw);
+  margin: 1.2rem auto 2rem;
+}
+
+.topbar {
+  margin-bottom: 0.75rem;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 16px;
+  border: 1px solid rgba(71, 100, 126, 0.45);
+  background: rgba(13, 20, 28, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+}
+
+.brand-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brand-link:hover .brand-text,
+.brand-link:focus-visible .brand-text {
+  color: var(--ink);
+}
+
+.menu-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.menu-link {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible {
+  color: var(--ink);
+  border-color: rgba(38, 217, 255, 0.28);
+  background: rgba(38, 217, 255, 0.1);
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.layout {
+  display: block;
+}
+
+.content-panel {
+  background: var(--panel);
+  border: 1px solid transparent;
+  border-radius: 18px;
+  box-shadow: none;
+  padding: 1rem 1.2rem;
+  min-height: calc(100vh - 8rem);
+}
+
+.content-head {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1rem;
+}
+
+#note-title {
+  margin: 0 0 0.9rem;
+}
+
+.prose {
+  line-height: 1.7;
+}
+
+.prose img {
+  width: min(100%, 760px);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.prose a {
+  color: var(--accent);
+}
+
+.prose blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 0.9rem;
+  border-left: 4px solid #2ac8e5;
+  background: #0c2433;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .menu-bar {
+    flex-wrap: wrap;
+  }
+}
