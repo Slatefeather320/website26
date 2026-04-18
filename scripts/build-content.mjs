@@ -2,6 +2,7 @@
 import path from "node:path";
 
 const ROOT = process.cwd();
+const CONTENT_DIR = path.join(ROOT, "mds");
 const OUT = path.join(ROOT, "data", "notes.json");
 const EXCLUDE = new Set(["AGENTS.md", "README.md"]);
 
@@ -42,7 +43,7 @@ function slugify(s) {
 }
 
 async function build() {
-  const entries = await readdir(ROOT, { withFileTypes: true });
+  const entries = await readdir(CONTENT_DIR, { withFileTypes: true });
   const mdFiles = entries.filter(
     (e) => e.isFile() && e.name.toLowerCase().endsWith(".md") && !EXCLUDE.has(e.name)
   );
@@ -50,7 +51,7 @@ async function build() {
   const notes = [];
 
   for (const file of mdFiles) {
-    const fullPath = path.join(ROOT, file.name);
+    const fullPath = path.join(CONTENT_DIR, file.name);
     const raw = await readFile(fullPath, "utf8");
     const fileStat = await stat(fullPath);
     const { body, title: frontTitle } = stripFrontMatter(raw);

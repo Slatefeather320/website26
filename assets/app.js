@@ -40,6 +40,17 @@ function noteUrlLookup(label) {
   return `#${slugify(target)}`;
 }
 
+function imageUrlLookup(target) {
+  return `/mds/${encodeURI(target)}`;
+}
+
+function imageMarkup(label) {
+  const { target, alias } = splitWikiLabel(label);
+  const width = /^\d+$/.test(alias) ? Number(alias) : null;
+  const widthAttr = width ? ` style="max-width:${width}px; width:100%;"` : "";
+  return `<img src="${imageUrlLookup(target)}" alt="" loading="lazy"${widthAttr} />`;
+}
+
 function getCurrentSlug() {
   return location.hash.replace(/^#/, "").trim().toLowerCase();
 }
@@ -68,8 +79,7 @@ function renderNoteFromSlug(slug) {
 
   const linked = note.markdown
     .replace(/!\[\[([^\]]+)\]\]/g, (_, image) => {
-      const { target } = splitWikiLabel(image);
-      return `![](${encodeURI(target)})`;
+      return imageMarkup(image);
     })
     .replace(/\[\[([^\]]+)\]\]/g, (_, label) => {
       const { alias } = splitWikiLabel(label);
