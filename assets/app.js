@@ -87,6 +87,15 @@ function renderNoteFromSlug(slug) {
     });
 
   noteContentEl.innerHTML = marked.parse(linked);
+
+  for (const link of noteContentEl.querySelectorAll("a[href]")) {
+    const href = link.getAttribute("href") || "";
+    const isInternal = href.startsWith("#") || href.startsWith("/");
+    if (!isInternal) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  }
 }
 
 function renderNotFound(slug) {

@@ -6,4 +6,11 @@ Currently I am majoring in Computer Science with plans to add another major in L
 
 This is my portfolio website. 
 
-[[Projects]]
+***
+## Projects 
+Projects and Interests are grouped together into broader headings. A lot of these topics have multiple projects within. 
+
+- [[Computer Graphics]] : From Blender to Linear Algebra. 
+- [[Linguistics]] : How humans talk and its intersection with Computer Science. 
+
+

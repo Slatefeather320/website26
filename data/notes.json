@@ -1,37 +1,29 @@
 {
-  "generatedAt": "2026-04-18T22:48:04.588Z",
+  "generatedAt": "2026-04-18T23:25:06.643Z",
   "notes": [
-    {
-      "filename": "Blog.md",
-      "basename": "Blog",
-      "slug": "blog",
-      "title": "Blog",
-      "markdown": "This is where blog will go.\n\n[[Home]]",
-      "updatedAt": "2026-03-04T03:23:12.091Z"
-    },
     {
       "filename": "Computer Graphics.md",
       "basename": "Computer Graphics",
       "slug": "computer-graphics",
       "title": "Computer Graphics",
-      "markdown": "In early 2020 (remember Covid?), I, like many other people, found myself with a lot of time on my hands. \n\nOne of the hobbies I used that time for is 3D modeling and rendering. Specifically, I discovered the open source 3D creation suite [Blender](https://www.blender.org/)\n\nYou can find a lot of the work I made during this time on [this Instagram](https://www.instagram.com/slatefeather_renders/) account.\n\n![[Pasted image 20260418182151.png|254]]\n*Render from 2022*\n\nA lot of what I have done since was directly influenced by this happenstance Covid hobby. \n\n- It was the catalyst for me wanting to make a portfolio website to showcase all the art. This taught me the basics of UI design and web programming. (and what a nightmare DNS records are). This website no longer exists as my interests moved on but ~most of the artwork I'm proud of is still on the Instagram. \n- It got me interested in Physically Based Rendering techniques. Here are some excellent YouTube channels which cover topics in PBR: [Acerola](https://www.youtube.com/c/Acerola_t),[Sebastian Lague](https://www.youtube.com/@SebastianLague). \n- As an extension to that, I am currently taking CMSC427 Computer Graphics where I am learning WebGL. This course focuses on the lower level theoretical aspects (its matrices and dot products ALL the way through). \n- I was invited by [IIT BHU](https://iitbhu.ac.in/) to participate in Film and Media Council's Digital Design competition where I met quite a few people interested in similar things. \n\nComputer Graphics for me started as a purely artistic expression based hobby but has slowly evolved into a technical expertise which I have found applications for in several different areas of my life. \n\n",
-      "updatedAt": "2026-04-18T22:40:20.596Z"
+      "markdown": "In early 2020 (remember Covid?), I, like many other people, found myself with a lot of time on my hands. \n\nOne of the hobbies I used that time for is 3D modeling and rendering. Specifically, I discovered the open source 3D creation suite [Blender](https://www.blender.org/)\n\nYou can find a lot of the work I made during this time on [this Instagram](https://www.instagram.com/slatefeather_renders/) account.\n\n![[Pasted image 20260418182151.png|254]]\n\n*Render from 2022*\n\n***\n\nA lot of what I have done since was directly influenced by this happenstance Covid hobby. \n\n- It was the catalyst for me wanting to make a portfolio website to showcase all the art. This taught me the basics of UI design and web programming. (and what a nightmare DNS records are). This website no longer exists as my interests moved on but ~most of the artwork I'm proud of is still on the Instagram. \n- It got me interested in Physically Based Rendering techniques. Here are some excellent YouTube channels which cover topics in PBR: [Acerola](https://www.youtube.com/c/Acerola_t), [Sebastian Lague](https://www.youtube.com/@SebastianLague). \n- As an extension to that, I am currently taking CMSC427 Computer Graphics where I am learning WebGL. This course focuses on the lower level theoretical aspects (its matrices and dot products ALL the way through). \n- I was invited by [IIT BHU](https://iitbhu.ac.in/) to participate in Film and Media Council's Digital Design competition where I met quite a few people interested in similar things. \n\n***\n\nComputer Graphics for me started as a purely artistic expression based hobby but has slowly evolved into a technical expertise which I have found applications for in several different areas of my life. \n\nI hope to implement what I am learning in this college course back into artistically interesting projects.  \n\n",
+      "updatedAt": "2026-04-18T22:53:44.712Z"
     },
     {
       "filename": "Home.md",
       "basename": "Home",
       "slug": "home",
       "title": "Home",
-      "markdown": "## Hello! I'm Sanil Aroṛa,\n\nI am currently a sophomore at the University of Maryland, College Park. \n\nCurrently I am majoring in Computer Science with plans to add another major in Linguistics before graduation. \n\nThis is my portfolio website. \n\n[[Projects]]\n",
-      "updatedAt": "2026-04-18T22:45:25.824Z"
+      "markdown": "## Hello! I'm Sanil Aroṛa,\n\nI am currently a sophomore at the University of Maryland, College Park. \n\nCurrently I am majoring in Computer Science with plans to add another major in Linguistics before graduation. \n\nThis is my portfolio website. \n\n***\n## Projects \nProjects and Interests are grouped together into broader headings. A lot of these topics have multiple projects within. \n\n- [[Computer Graphics]] : From Blender to Linear Algebra. \n- [[Linguistics]] : How humans talk and its intersection with Computer Science. \n\n\n",
+      "updatedAt": "2026-04-18T22:59:44.053Z"
     },
     {
-      "filename": "Projects.md",
-      "basename": "Projects",
-      "slug": "projects",
-      "title": "Projects",
-      "markdown": "[[Computer Graphics]]\n\n[[Home]]",
-      "updatedAt": "2026-04-18T22:40:30.543Z"
+      "filename": "Linguistics.md",
+      "basename": "Linguistics",
+      "slug": "linguistics",
+      "title": "Linguistics",
+      "markdown": "## What?\n\nLinguistics is the scientific study of languages. Mostly Human languages. \n***\n## Language Acquisition\n\nFrom January to December 2025, I was working at [Dr. Jeffery Lidz](https://jefflidz.com/)'s lab at The University of Maryland. Specifically the Child Language Acquisition Lab. \n\nI was working with [Katherine Howitt](https://www.katherinehowitt.com/) on understanding how children acquire crossover constraints. The research is still ongoing. [Here](https://static1.squarespace.com/static/594c4bf6bebafb95efece520/t/68daa1465bc7d63ce0b12402/1759158598979/Dragon+Cross+BUCLD+Abstract+2025+%281%29.pdf) are some preliminary results from the study. \n***\n## Computer Science \n\nWhat fascinates me the most about it is how many parallels it draws from computer science.   \n\nFor example, how computer language compilers lexicalize words, parse them into sentences, and then evaluate their meaning. There is some philosophical questions to be asked about if its inherently human to organize information into language-like structures. I will not be asking these questions right now. \n\nI would highly recommend taking CMSC330 or CMSC430 alongside LING311 (or equivalent in other colleges) to fully explore this overlap.\n***\n",
+      "updatedAt": "2026-04-18T23:17:32.906Z"
     }
   ]
 }

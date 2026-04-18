@@ -61,7 +61,7 @@ body::after {
 }
 
 body.static-bg {
-  background: #20242a;
+  background: #2f353d;
 }
 
 body.static-bg::before,
@@ -220,6 +220,24 @@ body:not(.static-bg) .content-panel::before {
 
 .prose a {
   color: var(--accent);
+}
+
+.prose hr {
+  height: 1px;
+  margin: 2rem 0;
+  border: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(38, 217, 255, 0) 0%,
+      rgba(38, 217, 255, 0.24) 18%,
+      rgba(96, 173, 255, 0.42) 50%,
+      rgba(38, 217, 255, 0.24) 82%,
+      rgba(38, 217, 255, 0) 100%
+    );
+  box-shadow:
+    0 0 10px rgba(38, 217, 255, 0.08),
+    0 0 22px rgba(96, 173, 255, 0.06);
 }
 
 .prose blockquote {
