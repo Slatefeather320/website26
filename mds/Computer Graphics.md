@@ -5,6 +5,7 @@ One of the hobbies I used that time for is 3D modeling and rendering. Specifical
 You can find a lot of the work I made during this time on [this Instagram](https://www.instagram.com/slatefeather_renders/) account.
 
 ![[Pasted image 20260418182151.png|254]]
+
 *Render from 2022*
 
 A lot of what I have done since was directly influenced by this happenstance Covid hobby. 
