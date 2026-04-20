@@ -1,9 +1,9 @@
 ﻿:root {
-  --bg: #090f14;
-  --panel: #090f14;
-  --ink: #9fb0c0;
-  --muted: #75889b;
-  --line: #1f3244;
+  --bg: #27313b;
+  --panel: #27313b;
+  --ink: #ffffff;
+  --muted: #c1ccd6;
+  --line: #4a6176;
   --accent: #53a9d4;
   --accent-soft: #123042;
   --shadow: 0 16px 42px rgba(0, 0, 0, 0.35);
@@ -61,7 +61,7 @@ body::after {
 }
 
 body.static-bg {
-  background: #2f353d;
+  background: #3a424c;
 }
 
 body.static-bg::before,
@@ -216,6 +216,14 @@ body:not(.static-bg) .content-panel::before {
   height: auto;
   border-radius: 12px;
   border: 1px solid var(--line);
+}
+
+.prose .embedded-pdf {
+  width: min(100%, 760px);
+  min-height: 620px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(10, 16, 24, 0.55);
 }
 
 .prose a {

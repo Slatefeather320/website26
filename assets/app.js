@@ -44,11 +44,19 @@ function imageUrlLookup(target) {
   return `/mds/${encodeURI(target)}`;
 }
 
-function imageMarkup(label) {
+function embeddedAssetMarkup(label) {
   const { target, alias } = splitWikiLabel(label);
   const width = /^\d+$/.test(alias) ? Number(alias) : null;
+  const src = imageUrlLookup(target);
+  const isPdf = target.toLowerCase().endsWith(".pdf");
+
+  if (isPdf) {
+    const widthStyle = width ? `max-width:${width}px;` : "";
+    return `<iframe class="embedded-pdf" src="${src}" title="${target}" loading="lazy" style="${widthStyle}"></iframe>`;
+  }
+
   const widthAttr = width ? ` style="max-width:${width}px; width:100%;"` : "";
-  return `<img src="${imageUrlLookup(target)}" alt="" loading="lazy"${widthAttr} />`;
+  return `<img src="${src}" alt="" loading="lazy"${widthAttr} />`;
 }
 
 function getCurrentSlug() {
@@ -79,7 +87,7 @@ function renderNoteFromSlug(slug) {
 
   const linked = note.markdown
     .replace(/!\[\[([^\]]+)\]\]/g, (_, image) => {
-      return imageMarkup(image);
+      return embeddedAssetMarkup(image);
     })
     .replace(/\[\[([^\]]+)\]\]/g, (_, label) => {
       const { alias } = splitWikiLabel(label);
