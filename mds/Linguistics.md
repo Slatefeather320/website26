@@ -6,7 +6,7 @@ Most of my work has been in syntax, though currently I am taking a phonology cou
 ***
 ## Language Acquisition
 
-From January to December 2025, I was working at [Dr. Jeffery Lidz](https://jefflidz.com/)'s lab at The University of Maryland. Specifically the Child Language Acquisition Lab. 
+From January to December 2025, I was working at [Dr. Jeffery Lidz](https://jefflidz.com/)'s lab at The University of Maryland. 
 
 I was working with [Katherine Howitt](https://www.katherinehowitt.com/) on understanding how children acquire crossover constraints. The research is still ongoing. [Here](https://static1.squarespace.com/static/594c4bf6bebafb95efece520/t/68daa1465bc7d63ce0b12402/1759158598979/Dragon+Cross+BUCLD+Abstract+2025+%281%29.pdf) are some preliminary results from the study. 
 ***
