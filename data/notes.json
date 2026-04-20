@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-18T23:25:06.643Z",
+  "generatedAt": "2026-04-20T03:11:50.648Z",
   "notes": [
     {
       "filename": "Computer Graphics.md",
@@ -10,20 +10,28 @@
       "updatedAt": "2026-04-18T22:53:44.712Z"
     },
     {
+      "filename": "Flight Control Systems.md",
+      "basename": "Flight Control Systems",
+      "slug": "flight-control-systems",
+      "title": "Flight Control Systems",
+      "markdown": "After graduating high school but before starting college, (April to July 2024) I was working in a Gurgaon based Aerospace start up called [Sharang Shakti](https://sharangshakti.com/). I worked on the non-lethal counter UAV [HantR](https://sharangshakti.com/hantr-interceptor)\n\nThis project's goal was to have a system capable of detecting, chasing after, and disabling another UAV using a net launching system. \n***\n\nMy role was split into two parts: \n\n## State Estimation \nI implemented an extended [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter). This process involved research, testing different projection functions, writing embedded code for flight controllers, flying the drone, and a lot of trial and error feedback looping. I also wrote a paper documenting this entire process and the final algorithm. Currently, I can not put that paper up here. \n\nAs a very high level explanation, the state estimation algorithm I wrote takes accelerometer data and fuses it with the GPS data to get a better state estimation than either of those sources alone would have provided. Accelerometers have a low error but it builds up fast when integrating to position, GPS has no error which builds up over time but it is less accurate. \n\n## Sensor Calibration \nI implemented an algorithm to reduce the error found in acceleration data reported by the IMU. Once again, it was a feedback loop of doing research, finding suitable algorithms, writing the code, finding coefficients, flying the drone, and measuring error between actual state and reported state. This too has a paper documenting the process and final algorithm which I cannot share yet. \n\nAs a high level explanation, the final algorithm uses a known starting state, level with the horizon experience one g of force downward and uses [differential evolution](https://en.wikipedia.org/wiki/Differential_evolution) to calibrate the magnitude and orientation reported by the IMU separately. Earlier versions of the algorithm used gradient descent instead but I found DE reduce error more efficiently, with less calibration time.  ",
+      "updatedAt": "2026-04-20T02:35:56.247Z"
+    },
+    {
       "filename": "Home.md",
       "basename": "Home",
       "slug": "home",
       "title": "Home",
-      "markdown": "## Hello! I'm Sanil Aroṛa,\n\nI am currently a sophomore at the University of Maryland, College Park. \n\nCurrently I am majoring in Computer Science with plans to add another major in Linguistics before graduation. \n\nThis is my portfolio website. \n\n***\n## Projects \nProjects and Interests are grouped together into broader headings. A lot of these topics have multiple projects within. \n\n- [[Computer Graphics]] : From Blender to Linear Algebra. \n- [[Linguistics]] : How humans talk and its intersection with Computer Science. \n\n\n",
-      "updatedAt": "2026-04-18T22:59:44.053Z"
+      "markdown": "## Hello! I'm Sanil Aroṛa,\n\nI am a sophomore at the University of Maryland, College Park. \n\nI am majoring in Computer Science with plans to add another major in Linguistics before graduation. \n\nThis is my portfolio website. \n\n***\n## Projects \nProjects and Interests are grouped together into broader headings. A lot of these topics have multiple projects within. \n\n- [[Computer Graphics]] : Blender, WebGL.\n- [[Linguistics]] : Language Acquisition, Intersection with CS.\n- [[Flight Control Systems]] : Work with counter UAVs, Kalman Filters, Sensor Calibration, Differential Evolution.   \n\n\n",
+      "updatedAt": "2026-04-20T02:12:29.218Z"
     },
     {
       "filename": "Linguistics.md",
       "basename": "Linguistics",
       "slug": "linguistics",
       "title": "Linguistics",
-      "markdown": "## What?\n\nLinguistics is the scientific study of languages. Mostly Human languages. \n***\n## Language Acquisition\n\nFrom January to December 2025, I was working at [Dr. Jeffery Lidz](https://jefflidz.com/)'s lab at The University of Maryland. Specifically the Child Language Acquisition Lab. \n\nI was working with [Katherine Howitt](https://www.katherinehowitt.com/) on understanding how children acquire crossover constraints. The research is still ongoing. [Here](https://static1.squarespace.com/static/594c4bf6bebafb95efece520/t/68daa1465bc7d63ce0b12402/1759158598979/Dragon+Cross+BUCLD+Abstract+2025+%281%29.pdf) are some preliminary results from the study. \n***\n## Computer Science \n\nWhat fascinates me the most about it is how many parallels it draws from computer science.   \n\nFor example, how computer language compilers lexicalize words, parse them into sentences, and then evaluate their meaning. There is some philosophical questions to be asked about if its inherently human to organize information into language-like structures. I will not be asking these questions right now. \n\nI would highly recommend taking CMSC330 or CMSC430 alongside LING311 (or equivalent in other colleges) to fully explore this overlap.\n***\n",
-      "updatedAt": "2026-04-18T23:17:32.906Z"
+      "markdown": "## What?\n\nLinguistics is the scientific study of languages. This includes phonology: how humans quantize sounds into discrete units, syntax: how words are connected to build a larger structure, semantics: the relation between meaning and language. \n\nMost of my work has been in syntax, though currently I am taking a phonology course (LING321) and I am quite excited to do some research here as well. \n***\n## Language Acquisition\n\nFrom January to December 2025, I was working at [Dr. Jeffery Lidz](https://jefflidz.com/)'s lab at The University of Maryland. \n\nI was working with [Katherine Howitt](https://www.katherinehowitt.com/) on understanding how children acquire crossover constraints. The research is still ongoing. [Here](https://static1.squarespace.com/static/594c4bf6bebafb95efece520/t/68daa1465bc7d63ce0b12402/1759158598979/Dragon+Cross+BUCLD+Abstract+2025+%281%29.pdf) are some preliminary results from the study. \n***\n## Computer Science \n\nWhat fascinates me the most about it is how many parallels it draws from computer science.   \n\nFor example, how computer language compilers lexicalize words, parse them into sentences, and then evaluate their meaning. There is some philosophical questions to be asked about if its inherently human to organize information into language-like structures. I will not be asking these questions right now. \n\nI would highly recommend taking CMSC330 or CMSC430 alongside LING311 (or equivalent in other colleges) to fully explore this overlap.\n",
+      "updatedAt": "2026-04-20T02:13:17.084Z"
     }
   ]
 }
